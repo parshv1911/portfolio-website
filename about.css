@@ -1,0 +1,40 @@
+body {
+  background-color: rgb(17, 17, 17);
+  color: white;
+}
+.about {
+  padding: 100px 60px;
+  background: rgb(17, 17, 17);
+  min-height: 100vh;
+}
+
+/* Heading Style */
+.about h1 {
+  font-size: 40px;
+  color: #5d62bb;
+  margin-bottom: 25px;
+}
+
+/* ANIMATION BASE */
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards;
+}
+
+/* Delays for smooth sequence */
+.delay {
+  animation-delay: 0.5s;
+}
+
+.delay2 {
+  animation-delay: 1s;
+}
+
+/* KEYFRAMES */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

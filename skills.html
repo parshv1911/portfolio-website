@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Skills</title>
+    <link rel="stylesheet" href="skills.css">
+    </head>
+<body>
+<div class="skills-section">
+  <h1>My Technical Skills</h1>
+
+  <!-- Programming -->
+  <div class="skill-category">
+   <h2 onclick="toggleSkills(this)">Programming <span>▼</span></h2>
+
+    <div id="programmingSkills" class="hidden-skills">
+
+      <div class="skill">
+        <span>Python</span>
+        <div class="skill-bar">
+          <div class="skill-level" style="width:95%">70%</div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span>SQL</span>
+        <div class="skill-bar">
+          <div class="skill-level" style="width:95%">80%</div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span>C++/C</span>
+        <div class="skill-bar">
+          <div class="skill-level" style="width:90%">75%</div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span>Java</span>
+        <div class="skill-bar">
+          <div class="skill-level" style="width:90%">60%</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Frontend -->
+  <div class="skill-category">
+    <h2 onclick="toggleSkills(this)">Frontend <span>▼</span></h2>
+
+    <div id="frontendSkills" class="hidden-skills">
+
+      <div class="skill">
+        <span>HTML</span>
+        <div class="skill-bar">
+          <div class="skill-level" style="width:90%">90%</div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span>CSS</span>
+        <div class="skill-bar">
+          <div class="skill-level" style="width:85%">85%</div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span>JavaScript</span>
+        <body>
+    <script>
+function toggleSkills(header) {
+  const category = header.parentElement;
+  const bars = category.querySelectorAll(".skill-level");
+
+  category.classList.toggle("active");
+
+  if (category.classList.contains("active")) {
+    bars.forEach(bar => {
+      const value = bar.textContent;
+      bar.style.width = value;
+    });
+  } else {
+    bars.forEach(bar => {
+      bar.style.width = "0";
+    });
+  }
+}
+</script>
+
+
+        </body>
+        <div class="skill-bar">
+          <div class="skill-level" style="width:80%">80%</div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span>React JS</span>
+        <div class="skill-bar">
+          <div class="skill-level" style="width:75%">75%</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Backend -->
+  <div class="skill-category">
+    <h2 onclick="toggleSkills(this)">Backend <span>▼</span></h2>
+
+    <div id="backendSkills" class="hidden-skills">
+
+      <div class="skill">
+        <span>Python</span>
+        <div class="skill-bar">
+          <div class="skill-level" style="width:85%">85%</div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span>Django</span>
+        <div class="skill-bar">
+          <div class="skill-level" style="width:80%">80%</div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span>Node JS</span>
+        <div class="skill-bar">
+          <div class="skill-level" style="width:70%">70%</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

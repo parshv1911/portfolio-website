@@ -1,0 +1,513 @@
+/* ============================================ */
+/* ADVANCED ANIMATIONS - OPTIONAL EXTRAS */
+/* ============================================ */
+
+/* These animations are optional and can be */
+/* added to enhance specific elements */
+
+/* ============================================ */
+/* HOVER ANIMATIONS FOR CARDS */
+/* ============================================ */
+
+/* 3D Flip Animation */
+@keyframes flipCard {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+.card-flip {
+  perspective: 1000px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card-flip:hover {
+  animation: flipCard 0.6s ease-in-out;
+}
+
+/* ============================================ */
+/* GRADIENT ANIMATIONS */
+/* ============================================ */
+
+/* Animated Gradient Background */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-bg {
+  background: linear-gradient(
+    135deg,
+    #00d4ff,
+    #ff6b6b,
+    #ffd700,
+    #00d4ff
+  );
+  background-size: 200% 200%;
+  animation: gradientShift 15s ease infinite;
+}
+
+/* ============================================ */
+/* PULSE ANIMATIONS */
+/* ============================================ */
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* ============================================ */
+/* BOUNCE ANIMATIONS */
+/* ============================================ */
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.bounce {
+  animation: bounce 1s infinite;
+}
+
+/* ============================================ */
+/* SHIMMER LOADING ANIMATION */
+/* ============================================ */
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.shimmer-loading {
+  background: linear-gradient(
+    90deg,
+    #1a1f3a,
+    #2a2f4a,
+    #1a1f3a
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* ============================================ */
+/* ROTATE ANIMATIONS */
+/* ============================================ */
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  animation: rotate 2s linear infinite;
+}
+
+.rotate-reverse {
+  animation: rotate 2s linear infinite reverse;
+}
+
+/* ============================================ */
+/* SCALE ANIMATIONS */
+/* ============================================ */
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.scale-in {
+  animation: scaleIn 0.5s ease-out;
+}
+
+/* ============================================ */
+/* TEXT ANIMATIONS */
+/* ============================================ */
+
+@keyframes slideInText {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-text {
+  animation: slideInText 0.8s ease-out;
+}
+
+/* Typing Effect with Blinking Cursor */
+@keyframes blink {
+  0%, 49% {
+    border-right-color: #00d4ff;
+  }
+  50%, 100% {
+    border-right-color: transparent;
+  }
+}
+
+.typewriter {
+  border-right: 3px solid #00d4ff;
+  animation: blink 0.7s steps(1) infinite;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* ============================================ */
+/* BACKGROUND ANIMATIONS */
+/* ============================================ */
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -2000px 0;
+  }
+}
+
+.animated-bg {
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      #1a1f3a,
+      #1a1f3a 2px,
+      #2a2f4a 2px,
+      #2a2f4a 4px
+    );
+  background-size: 4px 100%;
+  animation: moveBackground 10s linear infinite;
+}
+
+/* ============================================ */
+/* ICON ANIMATIONS */
+/* ============================================ */
+
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.pop-in {
+  animation: popIn 0.5s cubic-bezier(0.36, 0, 0.66, -0.56);
+}
+
+/* ============================================ */
+/* COMPLEX SCROLL ANIMATIONS */
+/* ============================================ */
+
+/* Fade + Scale on Scroll */
+@keyframes fadeScaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fade-scale-in {
+  animation: fadeScaleIn 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+/* Slide + Rotate on Scroll */
+@keyframes slideRotate {
+  from {
+    opacity: 0;
+    transform: translateX(-50px) rotate(-5deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+.slide-rotate {
+  animation: slideRotate 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+/* ============================================ */
+/* PARTICLE EFFECTS */
+/* ============================================ */
+
+@keyframes float-particle {
+  0% {
+    opacity: 0;
+    transform: translateY(0) translateX(0);
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px) translateX(50px);
+  }
+}
+
+.particle {
+  position: fixed;
+  pointer-events: none;
+  animation: float-particle 3s ease-out forwards;
+}
+
+/* ============================================ */
+/* MORPHING ANIMATIONS */
+/* ============================================ */
+
+@keyframes morph {
+  0% {
+    border-radius: 50% 50% 50% 50%;
+  }
+  25% {
+    border-radius: 60% 40% 30% 70%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%;
+  }
+  75% {
+    border-radius: 70% 30% 40% 60%;
+  }
+  100% {
+    border-radius: 50% 50% 50% 50%;
+  }
+}
+
+.morph {
+  animation: morph 5s ease-in-out infinite;
+}
+
+/* ============================================ */
+/* NEON GLOW ANIMATIONS */
+/* ============================================ */
+
+@keyframes neonGlow {
+  0%, 100% {
+    text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff;
+    box-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff;
+  }
+  50% {
+    text-shadow: 0 0 20px #00d4ff, 0 0 30px #ff6b6b;
+    box-shadow: 0 0 20px #00d4ff, 0 0 30px #ff6b6b;
+  }
+}
+
+.neon-glow {
+  animation: neonGlow 2s ease-in-out infinite;
+}
+
+/* ============================================ */
+/* SMOOTH COUNTER ANIMATION */
+/* ============================================ */
+
+@keyframes countUp {
+  from {
+    counter-increment: count 0;
+  }
+  to {
+    counter-increment: count var(--target);
+  }
+}
+
+.counter {
+  animation: countUp 2s ease-out forwards;
+}
+
+/* ============================================ */
+/* WAVE ANIMATION */
+/* ============================================ */
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.wave {
+  animation: wave 1s ease-in-out infinite;
+}
+
+.wave:nth-child(1) { animation-delay: 0s; }
+.wave:nth-child(2) { animation-delay: 0.1s; }
+.wave:nth-child(3) { animation-delay: 0.2s; }
+.wave:nth-child(4) { animation-delay: 0.3s; }
+.wave:nth-child(5) { animation-delay: 0.4s; }
+
+/* ============================================ */
+/* SPOTLIGHT ANIMATION */
+/* ============================================ */
+
+@keyframes spotlight {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 30px rgba(0, 212, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 212, 255, 0);
+  }
+}
+
+.spotlight {
+  animation: spotlight 2s infinite;
+}
+
+/* ============================================ */
+/* USAGE EXAMPLES */
+/* ============================================ */
+
+/*
+To use these advanced animations, add the class to your HTML:
+
+1. Pulse Effect:
+   <div class="project-card pulse">...</div>
+
+2. Bounce Animation:
+   <h1 class="section-title bounce">Title</h1>
+
+3. Gradient Background:
+   <section class="gradient-bg">...</section>
+
+4. Shimmer Loading:
+   <div class="shimmer-loading">Loading...</div>
+
+5. Rotate Icon:
+   <span class="rotate">⚙️</span>
+
+6. Scale In:
+   <p class="scale-in">Content</p>
+
+7. Typewriter Effect:
+   <h1 class="typewriter">Welcome to my portfolio</h1>
+
+8. Neon Glow:
+   <h2 class="neon-glow">Amazing Text</h2>
+
+9. Pop In:
+   <div class="pop-in">Click me!</div>
+
+10. Wave Animation:
+    <span class="wave">👋</span>
+    <span class="wave">👋</span>
+    <span class="wave">👋</span>
+*/
+
+/* ============================================ */
+/* HOVER EFFECTS COMBINATIONS */
+/* ============================================ */
+
+/* Card with Lift + Glow */
+.card-hover-effect {
+  transition: all 0.3s ease;
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 212, 255, 0.3);
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(255, 107, 107, 0.1));
+}
+
+/* Link Underline Animation */
+.link-animate {
+  position: relative;
+  text-decoration: none;
+  color: #00d4ff;
+}
+
+.link-animate::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #00d4ff;
+  transition: width 0.3s ease;
+}
+
+.link-animate:hover::after {
+  width: 100%;
+}
+
+/* ============================================ */
+/* STAGGERED ANIMATIONS */
+/* ============================================ */
+
+/* For lists of items */
+.stagger-delay-1 { animation-delay: 0.1s; }
+.stagger-delay-2 { animation-delay: 0.2s; }
+.stagger-delay-3 { animation-delay: 0.3s; }
+.stagger-delay-4 { animation-delay: 0.4s; }
+.stagger-delay-5 { animation-delay: 0.5s; }
+.stagger-delay-6 { animation-delay: 0.6s; }
+.stagger-delay-7 { animation-delay: 0.7s; }
+.stagger-delay-8 { animation-delay: 0.8s; }
+
+/* ============================================ */
+/* PRINT STYLES - HIDE ANIMATIONS */
+/* ============================================ */
+
+@media print {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
